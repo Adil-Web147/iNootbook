@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/iNootbook/static/css/main.ebe927c4.css",
+    "main.js": "/iNootbook/static/js/main.a6719c89.js",
+    "index.html": "/iNootbook/index.html",
+    "main.ebe927c4.css.map": "/iNootbook/static/css/main.ebe927c4.css.map",
+    "main.a6719c89.js.map": "/iNootbook/static/js/main.a6719c89.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ebe927c4.css",
+    "static/js/main.a6719c89.js"
+  ]
+}
