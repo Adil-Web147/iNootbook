@@ -1,0 +1,123 @@
+/* Adil.css */
+
+/* Add the stylish font to headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lobster', cursive; /* Apply the stylish font */
+}
+
+/* Style for the navbar */
+.navbar {
+    background-color: black !important; /* Set the background color to black */
+    width: 100%; /* Full width */
+    position: fixed; /* Fix the navbar at the top */
+    top: 0; /* Align at the top */
+    left: 0; /* Align to the left edge */
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+/* Ensure the navbar content is visible */
+.navbar-brand, .navbar-nav .nav-link, .navbar-toggler-icon {
+    color: white !important; /* Set the font color to white */
+}
+
+.navbar-toggler-icon {
+    background-color: white; /* Optional: Set a color for the toggle icon if needed */
+}
+
+/* Optional: Adjust colors for active state */
+.nav-link.active {
+    color: #f8f9fa !important; /* Adjust active link color if needed */
+}
+
+/* Background gradient with animation */
+body {
+    background: linear-gradient(135deg, #2c3e50, #34495e); /* Popular dark colors: charcoal gray and dark navy blue */
+    background-size: 200% 200%; /* Ensure gradient covers the whole background */
+    animation: gradientAnimation 5s ease infinite; /* Animate the gradient */
+    color: white; /* Set the default font color to white */
+}
+
+/* Animate the gradient */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+/* Particle animation */
+@keyframes particleAnimation {
+    0% { transform: scale(0); opacity: 1; }
+    100% { transform: scale(1); opacity: 0; }
+}
+
+/* 3D particle styles */
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, white, #d3d3d3); /* Particle color changed to white */
+    width: 20px; /* Increased width */
+    height: 20px; /* Height to match width */
+    animation: particleAnimation 2s ease-out infinite;
+    transform: perspective(500px) rotateX(45deg) rotateY(45deg); /* 3D transformation */
+    opacity: 0.8; /* Slightly transparent */
+}
+
+/* Generate particles */
+.particle::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, white, #d3d3d3); /* Additional particle color white */
+    width: 20px; /* Increased width */
+    height: 20px; /* Height to match width */
+    animation: particleAnimation 3s ease-out infinite;
+    transform: perspective(500px) rotateX(-45deg) rotateY(-45deg); /* 3D transformation */
+}
+
+/* Button styles */
+button {
+    background-color: #720d97; /* Refined color: Bright Blue */
+    color: white; /* Button text color */
+    border: none; /* Remove default border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 12px 24px; /* Padding */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for color, scale, and shadow */
+    position: relative; /* Position relative for particles */
+    overflow: hidden; /* Hide overflow for particles */
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #7a14c2; /* Darker button color on hover */
+    transform: scale(1.1); /* Slightly enlarge the button */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Increased shadow on hover */
+}
+
+/* Button focus effect */
+button:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px rgba(196, 14, 229, 0.5); /* Add a subtle shadow for focus */
+}
+
+/* Button particles */
+button::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0)); /* Particle color white */
+    width: 40px; /* Increased width for particles */
+    height: 40px; /* Height to match width */
+    animation: particleAnimation 2s ease-out infinite;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: 0; /* Ensure particles are behind text */
+}
+
+/* Button particles on hover */
+button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.4; /* Slightly visible particles */
+}
